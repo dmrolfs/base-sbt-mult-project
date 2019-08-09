@@ -44,7 +44,7 @@ libraryDependencies ++=
 //    "com.github.marklister" %% "product-collections" % "1.4.5"
 //  )
 
-addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
+addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full)
 
 //libraryDependencies += ( "com.jsuereth" %% "scala-arm" % "2.0.0-M1" )
 //
