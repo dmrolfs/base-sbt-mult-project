@@ -1,18 +1,12 @@
-import BuildSettings._
+// import BuildSettings._
 import Dependencies._
 import sbtassembly.AssemblyPlugin.autoImport.MergeStrategy
 
-name := "scoring-core"
+name := "base-core"
 
 description := "lorem ipsum."
 
-enablePlugins( BuildInfoPlugin )
-
-buildInfoKeys := Seq[BuildInfoKey]( name, version, scalaVersion, sbtVersion )
-
-buildInfoPackage := "scoring"
-
-scalacOptions := scalacBuildOptions
+// scalacOptions := scalacBuildOptions
 
 libraryDependencies ++=
   commonDependencies // ++
