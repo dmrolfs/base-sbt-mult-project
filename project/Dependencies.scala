@@ -50,7 +50,7 @@ object Dependencies {
   object akka extends SimpleModule {
     override val groupId = "com.typesafe.akka"
     override val artifactIdRoot = "akka"
-    override val version = "2.5.1"
+    override val version = "2.5.24"
     def all: Seq[ModuleID] = Seq( actor, stream, agent, cluster, clusterSharding, contrib, persistence, remote, slf4j )
 
     val actor = module( "actor" ) withSources() withJavadoc()
@@ -69,7 +69,7 @@ object Dependencies {
     val streamsTestkit = module( "stream-testkit" )
 
     val kryo = "com.github.romix.akka" %% "akka-kryo-serialization" % "0.5.2"
-    val kryoSerializers = "de.javakaffee" % "kryo-serializers" % "0.41"
+    val kryoSerializers = "de.javakaffee" % "kryo-serializers" % "0.45"
   }
 
   object persistence {
@@ -81,7 +81,7 @@ object Dependencies {
   object cats extends SimpleModule {
     override val groupId = "org.typelevel"
     override val artifactIdRoot = "cats"
-    override val version = "1.0.1"
+    override val version = "1.6.1"
 
     val core = module( "core" )
     val kernel = module( "kernel" )
