@@ -110,7 +110,7 @@ object Dependencies {
 
   object log {
     val persistLogging = "com.persist" %% "persist-logging" % "1.3.2"
-    val typesafe = "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0"
+    val typesafe = "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 
     object logback extends SimpleModule {
       override val groupId = "ch.qos.logback"
@@ -159,17 +159,17 @@ object Dependencies {
   }
 
   object facility {
-    val enumeratum = "com.beachape" %% "enumeratum" % "1.5.12"
+    val enumeratum = "com.beachape" %% "enumeratum" % "1.5.13"
     val guava = "com.google.guava" % "guava" % "21.0"
     // val offheap = "sh.den" % "scala-offheap_2.11" % "0.1"
     val fastutil = "it.unimi.dsi" % "fastutil" % "7.2.0" withSources() withJavadoc()
-    val bloomFilter = "com.github.alexandrnikitin" % "bloom-filter_2.11" % "0.8.0" withSources() withJavadoc()
+    val bloomFilter = "com.github.alexandrnikitin" % "bloom-filter_2.11" % "0.11.0" withSources() withJavadoc()
     val json4sJackson = "org.json4s" %% "json4s-jackson" % "3.5.2"
 //    val uuid = "com.eaio.uuid" % "uuid" % "3.4"
-    val uuid = "com.github.stephenc.eaio-uuid" % "uuid" % "3.4.0"
-    val config = "com.typesafe" % "config" % "1.3.1"
-    val ficus = "com.iheart" %% "ficus" % "1.4.0"
-    val shapeless = "com.chuusai" %% "shapeless" % "2.3.2" withSources() withJavadoc()
+    val uuid = "com.github.stephenc.eaio-uuid" % "uuid" % "3.4.2"
+    val config = "com.typesafe" % "config" % "1.3.4"
+    val ficus = "com.iheart" %% "ficus" % "1.4.7"
+    val shapeless = "com.chuusai" %% "shapeless" % "2.3.3" withSources() withJavadoc()
     val parboiled = "org.parboiled" %% "parboiled" % "2.1.4"
     val inflector = "org.atteo" % "evo-inflector" % "1.2.2"
     val squants = "org.typelevel"  %% "squants"  % "1.2.0"
@@ -179,7 +179,7 @@ object Dependencies {
     val scopt = "com.github.scopt" %% "scopt" % "3.5.0"
     val pyrolite = "net.razorvine" % "pyrolite" % "4.19"
     val msgpack = "org.velvia" %% "msgpack4s" % "0.6.0"
-    val prettyprint = "com.lihaoyi" %% "pprint" % "0.5.3"
+    val prettyprint = "com.lihaoyi" %% "pprint" % "0.5.4"
 
     val hadoopClient = "org.apache.hadoop" % "hadoop-client" % "2.8.0" intransitive // exclude( "log4j", "log4j" )
   }
