@@ -1,28 +1,34 @@
-import Dependencies._
-import BuildSettings._
+// import Dependencies._
 
-name := "scoring"
-organization in ThisBuild := "com.here"
-scalaVersion in ThisBuild := "2.12.4"
+// name := "BASE_SBT"
+// organization in ThisBuild := "com.github.dmrolfs"
+// scalaVersion in ThisBuild := "2.13.0"
 
-crossScalaVersions in ThisBuild := Seq("2.11.12")
+// crossScalaVersions in ThisBuild := Seq("2.12.9")
 
 // ivyScala := ivyScala.value map {
 //   _.copy(overrideScalaVersion = true)
 // }
 
 // replaces dynver + by -
-version in ThisBuild ~= (_.replace('+', '-'))
+// version in ThisBuild ~= (_.replace('+', '-'))
+
+
 
 // dependencies
 lazy val root =
   ( project in file(".") )
-  .settings( publishArtifact := false )
+  .enablePlugins( BuildInfoPlugin )
+  .settings( 
+    buildInfoKeys := Seq[BuildInfoKey]( name, version, scalaVersion, sbtVersion ),
+    buildInfoPackage := "base",
+    publishArtifact := false 
+  )
   .aggregate( core )
 
 
 // Core ==========================================
-lazy val core = ( project in file("./modules/core") )
+lazy val core = ( project in file("./core") )
 //Project(
 //  id       = "scoring-core",
 //  base     = file( "modules/core" )
@@ -62,3 +68,11 @@ lazy val core = ( project in file("./modules/core") )
 
 // addCommandAlias("runRaffleAkka", "sample-raffle/runMain raffle.app.MainAkka")
 // addCommandAlias("runRaffleInMemory", "sample-raffle/runMain raffle.app.MainInMemory")
+
+
+fork in Test := true
+javaOptions in Test += "-Dconfig.file=conf/test/application.test.conf"
+javaOptions in Test += "-Dsecrets.path="+baseDirectory.value+"/conf/test/secret.conf"
+
+
+scalafmtOnCompile in ThisBuild := true
