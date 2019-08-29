@@ -73,7 +73,7 @@ object Dependencies {
   }
 
   object persistence {
-    val cassandra = "com.typesafe.akka" %% "akka-persistence-cassandra" % "0.52"
+    val cassandra = "com.typesafe.akka" %% "akka-persistence-cassandra" % "0.99"
     val leveldb = "org.iq80.leveldb" % "leveldb" % "0.9" // "org.iq80.leveldb" % "leveldb" % "0.9"
     val leveldbjni = "org.fusesource.leveldbjni" % "leveldbjni-all" % "1.8" // "org.fusesource.leveldbjni" % "leveldbjni-all" % "1.8"
   }
@@ -130,7 +130,7 @@ object Dependencies {
   object metrics extends SimpleModule {
     override val groupId = "io.dropwizard.metrics"
     override val artifactIdRoot = "metrics"
-    override val version = "3.2.2"
+    override val version = "4.0.3"
     override val isScala = false
 
     def all = Seq( core, graphite, metricsScala, hdrhistogramReservoir, hdrhistogram ) // ++ kamon.all

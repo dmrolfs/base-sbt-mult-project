@@ -99,8 +99,8 @@ object Common extends AutoPlugin {
     cancelable in Global := true,
     autoAPIMappings := true,
     dependencyOverrides ++= Seq(
-      "com.typesafe.akka" %% "akka-persistence-cassandra" % "0.61", // match lagom 1.4.x
-      "io.dropwizard.metrics" % "metrics-core" % "3.2.2" // match lagom 1.4.x
+      "com.typesafe.akka" %% "akka-persistence-cassandra" % "0.99", // match lagom 1.5.x
+      "io.dropwizard.metrics" % "metrics-core" % "3.2.6" // match lagom 1.5.x
     )
   )
 }
