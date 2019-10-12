@@ -167,7 +167,7 @@ object Dependencies {
     val json4sJackson = "org.json4s" %% "json4s-jackson" % "3.5.2"
 //    val uuid = "com.eaio.uuid" % "uuid" % "3.4"
     val uuid = "com.github.stephenc.eaio-uuid" % "uuid" % "3.4.2"
-    val config = "com.typesafe" % "config" % "1.3.4"
+    val config = "com.typesafe" % "config" % "1.4.0"
     val ficus = "com.iheart" %% "ficus" % "1.4.7"
     val shapeless = "com.chuusai" %% "shapeless" % "2.3.3" withSources() withJavadoc()
     val parboiled = "org.parboiled" %% "parboiled" % "2.1.4"
