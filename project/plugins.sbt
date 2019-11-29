@@ -14,7 +14,7 @@ addSbtPlugin("net.virtual-void"                  % "sbt-dependency-graph"   % "0
 addSbtPlugin("org.scalastyle"                    %% "scalastyle-sbt-plugin" % "1.0.0")
 addSbtPlugin("io.get-coursier" % "sbt-coursier" % "2.0.0-RC2-1")
 
-addSbtPlugin("org.scoverage"                     % "sbt-scoverage"          % "1.6.0")
+addSbtPlugin("org.scoverage"                     % "sbt-scoverage"          % "1.6.1")
 //addSbtPlugin("org.scoverage" %% "sbt-coveralls" % "1.1.0")
 
 addSbtPlugin("se.marcuslonnberg" % "sbt-docker" % "1.5.0")
