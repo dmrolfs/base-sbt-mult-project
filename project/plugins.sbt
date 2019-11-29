@@ -5,7 +5,7 @@ logLevel := Level.Warn
 
 addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"           % "0.14.10")
 addSbtPlugin("com.eed3si9n"                      % "sbt-buildinfo"          % "0.9.0")
-addSbtPlugin("com.github.gseitz"                 % "sbt-release"            % "1.0.11")
+addSbtPlugin("com.github.gseitz"                 % "sbt-release"            % "1.0.12")
 addSbtPlugin("org.scalameta"                    % "sbt-scalafmt"           % "2.0.3")
 addSbtPlugin("com.thoughtworks.sbt-api-mappings" % "sbt-api-mappings"       % "3.0.0")
 addSbtPlugin("com.timushev.sbt"                  % "sbt-updates"            % "0.4.2")
