@@ -18,7 +18,7 @@ addSbtPlugin("org.scoverage"                     % "sbt-scoverage"          % "1
 //addSbtPlugin("org.scoverage" %% "sbt-coveralls" % "1.1.0")
 
 addSbtPlugin("se.marcuslonnberg" % "sbt-docker" % "1.5.0")
-addSbtPlugin("com.tapad" % "sbt-docker-compose" % "1.0.34")
+addSbtPlugin("com.tapad" % "sbt-docker-compose" % "1.0.35")
 
 // addSbtPlugin("com.typesafe.sbt" % "sbt-multi-jvm" % "0.3.11")
 
