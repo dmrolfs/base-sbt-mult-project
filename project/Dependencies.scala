@@ -159,7 +159,7 @@ object Dependencies {
   }
 
   object facility {
-    val enumeratum = "com.beachape" %% "enumeratum" % "1.5.13"
+    val enumeratum = "com.beachape" %% "enumeratum" % "1.5.14"
     val guava = "com.google.guava" % "guava" % "21.0"
     // val offheap = "sh.den" % "scala-offheap_2.11" % "0.1"
     val fastutil = "it.unimi.dsi" % "fastutil" % "7.2.0" withSources() withJavadoc()
