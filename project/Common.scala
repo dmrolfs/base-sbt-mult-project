@@ -13,7 +13,7 @@ object Common extends AutoPlugin {
   override def projectSettings = Seq(
     organization := "com.github.dmrolfs",
     version := "0.0.1-SNAPSHOT",
-    crossScalaVersions := Seq( "2.12.9" ),
+    crossScalaVersions := Seq( "2.12.13" ),
     scalaVersion := crossScalaVersions { (vs: Seq[String]) =>
       vs.head
     }.value,
