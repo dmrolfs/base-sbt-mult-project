@@ -110,7 +110,7 @@ object Dependencies {
 
   object log {
     val persistLogging = "com.persist" %% "persist-logging" % "1.3.2"
-    val typesafe = "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+    val typesafe = "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
 
     object logback extends SimpleModule {
       override val groupId = "ch.qos.logback"
