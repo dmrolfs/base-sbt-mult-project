@@ -168,7 +168,7 @@ object Dependencies {
 //    val uuid = "com.eaio.uuid" % "uuid" % "3.4"
     val uuid = "com.github.stephenc.eaio-uuid" % "uuid" % "3.4.2"
     val config = "com.typesafe" % "config" % "1.3.4"
-    val ficus = "com.iheart" %% "ficus" % "1.4.7"
+    val ficus = "com.iheart" %% "ficus" % "1.5.1"
     val shapeless = "com.chuusai" %% "shapeless" % "2.3.3" withSources() withJavadoc()
     val parboiled = "org.parboiled" %% "parboiled" % "2.1.4"
     val inflector = "org.atteo" % "evo-inflector" % "1.2.2"
