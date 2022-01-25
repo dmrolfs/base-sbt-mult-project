@@ -121,8 +121,8 @@ object Dependencies {
       val classic = module( "classic" )
     }
 
-    val slf4j = "org.slf4j" % "slf4j-api" % "1.7.28" intransitive
-    val log4jOverSlf4j = "org.slf4j" % "log4j-over-slf4j" % "1.7.28"
+    val slf4j = "org.slf4j" % "slf4j-api" % "1.7.34" intransitive
+    val log4jOverSlf4j = "org.slf4j" % "log4j-over-slf4j" % "1.7.34"
 
     def all = Seq( typesafe, logback.core, logback.classic, slf4j, log4jOverSlf4j, persistLogging )
   }
