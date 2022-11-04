@@ -70,7 +70,7 @@ object Common extends AutoPlugin {
       //          "-Xfatal-warnings",
       "-Xlog-reflective-calls"
     ),
-    scalacOptions in Test ++= Seq( "-Yrangepos" ),
+    (Test / scalacOptions) ++= Seq( "-Yrangepos" ),
     fork := true,
     // SLF4J initializes itself upon the first logging call.  Because sbt
     // runs tests in parallel it is likely that a second thread will
@@ -86,17 +86,17 @@ object Common extends AutoPlugin {
     // tests [1].
     //
     // [1] http://stackoverflow.com/a/12095245
-    testOptions in Test += Tests.Setup(
+    (Test / testOptions) += Tests.Setup(
       classLoader =>
         classLoader
           .loadClass( "org.slf4j.LoggerFactory" )
           .getMethod( "getLogger", classLoader.loadClass( "java.lang.String" ) )
           .invoke( null, "ROOT" )
     ),
-    parallelExecution in Test := false,
-    testOptions in Test += Tests.Argument( TestFrameworks.ScalaTest, "-oDFT" ),
-    triggeredMessage in ThisBuild := Watched.clearWhenTriggered,
-    cancelable in Global := true,
+    (Test / parallelExecution) := false,
+    (Test / testOptions) += Tests.Argument( TestFrameworks.ScalaTest, "-oDFT" ),
+    (ThisBuild / triggeredMessage) := Watched.clearWhenTriggered,
+    (Global / cancelable) := true,
     autoAPIMappings := true,
     dependencyOverrides ++= Seq(
       "com.typesafe.akka" %% "akka-persistence-cassandra" % "0.99", // match lagom 1.5.x
