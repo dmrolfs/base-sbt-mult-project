@@ -16,9 +16,9 @@ lazy val root =
 lazy val core = ( project in file("./core") )
 
 
-fork in Test := true
-javaOptions in Test += "-Dconfig.file=conf/test/application.test.conf"
-javaOptions in Test += "-Dsecrets.path="+baseDirectory.value+"/conf/test/secret.conf"
+(Test / fork) := true
+(Test / javaOptions) += "-Dconfig.file=conf/test/application.test.conf"
+(Test / javaOptions) += "-Dsecrets.path="+baseDirectory.value+"/conf/test/secret.conf"
 
 
-scalafmtOnCompile in ThisBuild := true
+(ThisBuild / scalafmtOnCompile) := true
